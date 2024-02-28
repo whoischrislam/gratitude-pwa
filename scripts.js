@@ -17,9 +17,10 @@ const gratitudeDB = ref(db, "gratitude");
 // If there is already data in the database, display it
 
 // Empty state
-onValue(gratitudeDB, (snapshot) => {
+onValue(gratitudeDB, function(snapshot) {
     if(snapshot.exists()) {
-        const gratitudeList = Object.entries(snapshot.val());
+        let gratitudeList = Object.entries(snapshot.val());
+        clearList();
         gratitudeList.forEach((gratitude) => {
             render(gratitude[0], gratitude[1]);
         });
@@ -48,7 +49,6 @@ gratitudeSubmitBtn.addEventListener("click", () => {
     if(gratitude) {
         push(gratitudeDB, gratitude);
         gratitudeInput.value = "";
-        clearList();
     }
 });
 
@@ -59,7 +59,6 @@ function render(key, value){
     gratitudeItem.classList.add("gratitude-item");
     gratitudeItem.addEventListener("click", () => {
         removeItem(key);
-        clearList();
     });
     gratitudeList.append(gratitudeItem);
 }
