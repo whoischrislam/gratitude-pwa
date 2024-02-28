@@ -20,6 +20,10 @@ html, body {
     user-select: none;
 }
 
+h1 {
+    font-size: 1.6rem;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -42,6 +46,20 @@ main {
     flex-direction: column;
 }
 
+#empty-state {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #bbbbbb;
+    background-color: #ffffff;
+    list-style: none;
+    padding: 1rem;
+    border-radius: 0.4em;
+}
+
+#empty-state p:first-child {
+    margin-bottom: 0.6rem;
+}
+
 .gratitude-item {
     background-color: #ffffff;
     list-style: none;
@@ -52,6 +70,14 @@ main {
 
 .gratitude-item:hover {
     background-color: #FDFBED;
+}
+
+.inline-action {
+    color: #E9D435;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1rem;
 }
 
 #form-section {
