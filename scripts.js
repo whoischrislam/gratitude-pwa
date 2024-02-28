@@ -26,6 +26,7 @@ onValue(gratitudeDB, function(snapshot) {
         });
     } else {
         // Add icon later
+        clearList();
         const emptyState = document.createElement("li");
         const emptyStateText = document.createElement("p");
         emptyStateText.textContent = "No gratitude notes... yet!";
