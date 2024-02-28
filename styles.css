@@ -90,7 +90,7 @@ main {
     width: 100%;
     position: fixed;
     bottom: 0;
-    padding: 1.4em;
+    padding: 1em 1em 1.6em 1em;
     gap: 0.6em;
     display: flex;
     flex-direction: column;
