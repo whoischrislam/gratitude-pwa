@@ -21,7 +21,6 @@ onValue(gratitudeDB, (snapshot) => {
     const data = snapshot.val();
     if(snapshot.exists()) {
         const gratitudeList = Object.entries(data);
-        console.log(gratitudeList);
         gratitudeList.forEach((gratitude) => {
             render(gratitude[0], gratitude[1]);
         });
@@ -60,7 +59,6 @@ function render(key, value){
     gratitudeItem.textContent = value;
     gratitudeItem.classList.add("gratitude-item");
     gratitudeItem.addEventListener("click", () => {
-        console.log(key);
         removeItem(key);
         clearList();
     });
