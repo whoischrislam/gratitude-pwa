@@ -18,9 +18,8 @@ const gratitudeDB = ref(db, "gratitude");
 
 // Empty state
 onValue(gratitudeDB, (snapshot) => {
-    const data = snapshot.val();
     if(snapshot.exists()) {
-        const gratitudeList = Object.entries(data);
+        const gratitudeList = Object.entries(snapshot.val());
         gratitudeList.forEach((gratitude) => {
             render(gratitude[0], gratitude[1]);
         });
