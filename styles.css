@@ -104,6 +104,7 @@ main {
     background-color: #FDFBED;
     border: 1px solid #F9F2C8;
     border-radius: 0.4em;
+    font-size: 1rem;
 }
 
 #gratitude-input[type="text"]:hover {
@@ -116,6 +117,8 @@ main {
 }
 
 button {
+    font-size: 1rem;
+    font-weight: 700;
     background-color: #E9D435;
     padding: 1em;
     border: none;
